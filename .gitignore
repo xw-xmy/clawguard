@@ -1,0 +1,22 @@
+# 配置敏感信息
+monitor.conf
+
+# 日志
+*.log
+logs/
+
+# 备份
+*.bak
+*.backup
+
+# 临时文件
+tmp/
+temp/
+.cache/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# OpenClaw运行时
+/openclaw/

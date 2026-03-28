@@ -1,0 +1,43 @@
+# 🐕 ClawGuard 配置文件示例
+# 复制此文件为 monitor.conf 并修改配置
+
+# ============ 阈值配置 ============
+MEMORY_THRESHOLD=1500
+RESPONSE_THRESHOLD=3000
+DISK_THRESHOLD=85
+ERROR_THRESHOLD=10
+
+# ============ 已知任务 ============
+# 空格分隔的任务名，监控会检测这些任务的执行状态
+KNOWN_JOBS="每日新闻简报 每日AI早报 cron-monitor openclaw-maintenance 看门狗"
+
+# ============ 告警配置 ============
+# 修改为你的QQ号或企微账号
+ALERT_TARGET="qqbot:c2c:YOUR_QQ_ID"
+
+# ============ 自监控 ============
+# 防止重复运行
+SELF_CHECK=true
+
+# ============ 错误趋势 (可选) ============
+ERROR_TREND_WINDOW=5
+ERROR_TREND_THRESHOLD=3
+
+# ============ 通道健康权重 (可选) ============
+CHANNEL_HEALTH_WEIGHT_ERROR=30
+CHANNEL_HEALTH_WEIGHT_TIMEOUT=50
+
+# ============ 集群模式 (可选) ============
+# 多实例监控
+CLUSTER_MODE=false
+CLUSTER_INSTANCES=""
+
+# ============ Webhook (可选) ============
+# 自定义告警回调
+WEBHOOK_ENABLED=false
+WEBHOOK_URL=""
+
+# ============ 使用说明 ============
+# 1. 配置热加载: kill -SIGHUP $(pgrep -f openclaw-monitor.sh)
+# 2. 环境变量覆盖: export MEMORY_THRESHOLD=2000
+# 3. 容器化: docker run -e MEMORY_THRESHOLD=2000 ...
