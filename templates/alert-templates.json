@@ -1,0 +1,74 @@
+{
+  "templates": {
+    "gateway_down": {
+      "title": "🚨 Gateway 宕机",
+      "body": "Gateway 进程已停止运行，正在尝试重启...",
+      "severity": "critical",
+      "cooldown": 300
+    },
+    "gateway_slow": {
+      "title": "⚠️ Gateway 响应慢",
+      "body": "响应时间: {response_ms}ms (阈值: {threshold}ms)",
+      "severity": "warning",
+      "cooldown": 600
+    },
+    "gateway_restart": {
+      "title": "🔄 Gateway 已重启",
+      "body": "Gateway 已成功重启，当前状态正常",
+      "severity": "info",
+      "cooldown": 1800
+    },
+    "task_failed": {
+      "title": "❌ 任务执行失败",
+      "body": "任务 [{task_name}] 执行失败，错误: {error}",
+      "severity": "error",
+      "cooldown": 1800
+    },
+    "task_delivery_failed": {
+      "title": "📬 任务投递失败",
+      "body": "任务 [{task_name}] 连续 {count} 次投递失败",
+      "severity": "warning",
+      "cooldown": 3600
+    },
+    "memory_high": {
+      "title": "💾 内存使用率高",
+      "body": "Gateway 内存使用: {memory}MB (阈值: {threshold}MB)",
+      "severity": "warning",
+      "cooldown": 1800
+    },
+    "disk_full": {
+      "title": "💽 磁盘空间不足",
+      "body": "磁盘使用率: {disk}% (阈值: {threshold}%)",
+      "severity": "critical",
+      "cooldown": 3600
+    },
+    "error_trend": {
+      "title": "📈 错误趋势告警",
+      "body": "检测到连续 {count} 次错误，建议检查系统状态",
+      "severity": "warning",
+      "cooldown": 3600
+    },
+    "channel_down": {
+      "title": "📱 通道异常",
+      "body": "通道 [{channel}] 发送失败: {error}",
+      "severity": "error",
+      "cooldown": 1800
+    },
+    "all_normal": {
+      "title": "✅ 系统正常",
+      "body": "所有监控项均正常，系统运行稳定",
+      "severity": "info",
+      "cooldown": 0
+    }
+  },
+  "placeholders": {
+    "response_ms": "响应时间（毫秒）",
+    "threshold": "配置阈值",
+    "task_name": "任务名称",
+    "error": "错误信息",
+    "count": "连续次数",
+    "memory": "内存使用量",
+    "disk": "磁盘使用率",
+    "channel": "通道名称"
+  }
+}

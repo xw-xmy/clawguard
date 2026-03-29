@@ -1,0 +1,30 @@
+# ClawGuard 集群配置文件
+# 复制此文件为 cluster.conf 并修改配置
+
+# ============ 集群模式 ============
+CLUSTER_MODE=true
+
+# 集群实例列表（空格分隔）
+# 格式: http://ip:port
+CLUSTER_INSTANCES="
+http://192.168.1.100:15846
+http://192.168.1.101:15846
+http://192.168.1.102:15846
+"
+
+# 集群健康检查间隔（秒）
+CLUSTER_CHECK_INTERVAL=300
+
+# 集群告警阈值（当超过此数量的实例离线时告警）
+CLUSTER_ALERT_THRESHOLD=2
+
+# ============ 集群负载均衡 ============
+# 启用负载均衡模式（轮询分发任务）
+CLUSTER_LOAD_BALANCE=false
+
+# ============ 集群同步 ============
+# 同步配置到其他节点
+CLUSTER_SYNC_CONFIG=false
+
+# 同步定时任务
+CLUSTER_SYNC_JOBS=false
