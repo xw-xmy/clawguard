@@ -1,17 +1,15 @@
 {
-  "memory_percent": 60,
-  "memory_absolute_mb": 2000,
-  "disk_percent": 80,
+  "memory_percent": 70,
+  "memory_absolute_mb": 2048,
+  "disk_percent": 90,
   "cpu_percent": 80,
-  "response_ms": 3000,
+  "response_ms": 5000,
   "timeout_rate_percent": 10,
   "retry_max": 3,
-  "retry_delays": [1, 2, 4],
   "timeout_seconds": 5,
   "circuit_breaker": {
     "failure_threshold": 5,
-    "timeout_seconds": 30,
-    "half_open_max_requests": 2
+    "timeout_seconds": 30
   },
   "heartbeat": {
     "warn_seconds": 60,
