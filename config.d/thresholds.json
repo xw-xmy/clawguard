@@ -1,6 +1,6 @@
 {
   "memory_percent": 70,
-  "memory_absolute_mb": 2048,
+  "memory_absolute_mb": 1400,
   "disk_percent": 90,
   "cpu_percent": 80,
   "response_ms": 5000,
