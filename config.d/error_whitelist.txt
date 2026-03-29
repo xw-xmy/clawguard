@@ -1,0 +1,13 @@
+session timed out
+will re-identify
+pricing bootstrap
+DeprecationWarning
+punycode
+token_missing
+unauthorized
+qqbot:default
+sendText result.*error=none
+gateway/channels/qqbot
+handshake-timeout
+content_filter
+No response within timeout
