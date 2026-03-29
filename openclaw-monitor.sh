@@ -76,7 +76,10 @@ check_cron
 check_memory
 check_disk
 check_logs
-check_webui
+# Web UI 检测（可选）
+if [[ "$WEBUI_CHECK_ENABLED" != "false" ]]; then
+    check_webui
+fi
 check_channel
     check_cpu
     check_network
