@@ -1,0 +1,7 @@
+{
+  "memory_percent": 70,
+  "disk_percent": 80,
+  "cpu_percent": 80,
+  "response_ms": 3000,
+  "timeout_rate_percent": 10
+}
