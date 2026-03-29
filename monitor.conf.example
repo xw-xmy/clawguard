@@ -7,9 +7,14 @@ RESPONSE_THRESHOLD=3000
 DISK_THRESHOLD=85
 ERROR_THRESHOLD=10
 
+# ============ 慢响应重启配置 (可选) ============
+# Gateway 响应超过此阈值时计数，连续3次触发重启
+SLOW_RESPONSE_THRESHOLD=30000  # 毫秒 (默认30秒)
+SLOW_RESPONSE_COUNT=3           # 连续异常次数
+
 # ============ 已知任务 ============
 # 空格分隔的任务名，监控会检测这些任务的执行状态
-KNOWN_JOBS="每日新闻简报 每日AI早报 cron-monitor openclaw-maintenance 看门狗"
+KNOWN_JOBS="cron-monitor openclaw-maintenance 看门狗"
 
 # ============ 告警配置 ============
 # 修改为你的QQ号或企微账号
@@ -32,10 +37,14 @@ CHANNEL_HEALTH_WEIGHT_TIMEOUT=50
 CLUSTER_MODE=false
 CLUSTER_INSTANCES=""
 
-# ============ Webhook (可选) ============
-# 自定义告警回调
+# ============ 备用告警通道 ============
+# Webhook: 自定义告警回调 (企业微信/钉钉/Slack等)
 WEBHOOK_ENABLED=false
 WEBHOOK_URL=""
+
+# 邮件: 系统需安装 mailx
+EMAIL_ENABLED=false
+EMAIL_TO=""
 
 # ============ 使用说明 ============
 # 1. 配置热加载: kill -SIGHUP $(pgrep -f openclaw-monitor.sh)
